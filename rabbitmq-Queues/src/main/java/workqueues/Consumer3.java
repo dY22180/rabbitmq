@@ -18,7 +18,7 @@ public class Consumer3 {
         Channel channel = connection.createChannel();
         DeliverCallback deliverCallback=(consumerTag, delivery)->{
             String receivedMessage = new String(delivery.getBody());
-            System.out.println("接收到消息1:"+receivedMessage);
+            System.out.println("接收到消息TO:"+receivedMessage);
         };
         CancelCallback cancelCallback=(consumerTag)->{
             System.out.println(consumerTag+"消费者取消消费接口回调逻辑");
